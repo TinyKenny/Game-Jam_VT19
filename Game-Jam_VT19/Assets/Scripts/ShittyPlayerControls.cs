@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ShittyPlayerControls : MonoBehaviour
 {
-    private float moveSpeedMod = 1.5f;
+    private float moveSpeedMod = 5.0f;
     private float rotationSpeedMod = 20.0f;
 
     /* 
@@ -34,11 +34,10 @@ public class ShittyPlayerControls : MonoBehaviour
         float rotateY = Input.GetAxisRaw("Yaw");
         float rotateZ = Input.GetAxisRaw("Roll");
 
-        //Debug.Log(Input.GetAxisRaw("Yaw"));
-
         transform.Rotate(new Vector3(rotateX, rotateY, rotateZ) * rotationSpeedMod * Time.deltaTime); // z = Input.GetAxisRaw("Horizontal")
 
+        Debug.Log(transform.forward);
 
-        transform.Translate(transform.forward * moveSpeedMod * Time.deltaTime);
+        transform.Translate(new Vector3(0.0f, 0.0f, 1.0f) * moveSpeedMod * Time.deltaTime);
     }
 }
