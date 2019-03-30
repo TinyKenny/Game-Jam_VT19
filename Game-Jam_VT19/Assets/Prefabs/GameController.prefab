@@ -45,3 +45,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   straightPipes:
   - {fileID: 1997462345698597115, guid: 851ffc2c78017104c8bfefaaca0ddb35, type: 3}
+  - {fileID: 8515057975001781530, guid: 800640c112c29c74492cc86e8fbd02a7, type: 3}
+  cornerPipes:
+  - {fileID: 6146152826277096131, guid: 0f34b7b40b67c9444b3b4c91af45508b, type: 3}
+  caltropPipes:
+  - {fileID: 4764765790980678235, guid: 5925128f15f622d4da6523339b234355, type: 3}
+  crossingPipes:
+  - {fileID: 6541258133467905861, guid: 0eb09adb4c99fe3479c7880d5a898d85, type: 3}
+  tCrossingPipes:
+  - {fileID: 7211459487082301301, guid: bd00b1c428699f441804400c59468cec, type: 3}
+  doubleTCrossingPipes:
+  - {fileID: 9124272776227168992, guid: 6a7feb233b082d54ca49fee307a04855, type: 3}
+  muhsroomPipes:
+  - {fileID: 7170302109736686570, guid: f2db84cd066647d4293bd39285270379, type: 3}
