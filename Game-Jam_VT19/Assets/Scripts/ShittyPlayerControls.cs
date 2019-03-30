@@ -4,8 +4,16 @@ using UnityEngine;
 
 public class ShittyPlayerControls : MonoBehaviour
 {
-    private float moveSpeedMod = 5.0f;
-    private float rotationSpeedMod = 20.0f;
+    public float baseMovementSpeed = 5.0f;
+
+    [Header("Base Rotation Speeds")]
+    public float pitchSpeed = 20.0f;
+    public float yawSpeed = 20.0f;
+    public float rollSpeed = 20.0f;
+
+    [Header("Speed Scaling (Should be left at zero!)")]
+    public float moveSpeedMod = 0.0f;
+    public float rotationSpeedMod = 0.0f;
 
     /* 
      * movement speed up
@@ -30,14 +38,14 @@ public class ShittyPlayerControls : MonoBehaviour
     void Update()
     {
 
-        float rotateX = Input.GetAxisRaw("Pitch");
-        float rotateY = Input.GetAxisRaw("Yaw");
-        float rotateZ = Input.GetAxisRaw("Roll");
+        float rotateX = Input.GetAxisRaw("Pitch") * pitchSpeed;
+        float rotateY = Input.GetAxisRaw("Yaw") * yawSpeed;
+        float rotateZ = Input.GetAxisRaw("Roll") * rollSpeed;
 
-        transform.Rotate(new Vector3(rotateX, rotateY, rotateZ) * rotationSpeedMod * Time.deltaTime); // z = Input.GetAxisRaw("Horizontal")
+        transform.Rotate(new Vector3(rotateX, rotateY, rotateZ) * (1.0f + rotationSpeedMod) * Time.deltaTime); // z = Input.GetAxisRaw("Horizontal")
 
         //Debug.Log(transform.forward);
 
-        transform.Translate(new Vector3(0.0f, 0.0f, 1.0f) * moveSpeedMod * Time.deltaTime);
+        transform.Translate(new Vector3(0.0f, 0.0f, 1.0f) * baseMovementSpeed * (1.0f + moveSpeedMod) * Time.deltaTime);
     }
 }
