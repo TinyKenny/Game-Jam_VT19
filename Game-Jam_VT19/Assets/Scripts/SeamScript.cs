@@ -12,10 +12,7 @@ public class SeamScript : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player") && otherPipe == null && isExit)
         {
-
-
-            Debug.Break();
-
+            //Debug.Break();
 
 
             int pipeToPickIndex = Random.Range(0, GameController.GameControllerInstance.pipes.Length - 1);
@@ -23,32 +20,35 @@ public class SeamScript : MonoBehaviour
             //GameObject pipeToPick = GameController.GameControllerInstance.pipes[pipeToPickIndex];
             GameObject pipeToPick = Instantiate(GameController.GameControllerInstance.pipes[pipeToPickIndex]);
 
-            Transform[] pipeEntrances = pipeToPick.GetComponentsInChildren<Transform>();
+            SeamScript[] pipeEntrances = pipeToPick.GetComponentsInChildren<SeamScript>();
 
-            //int entranceToPickIndex = Random.Range(0, pipeEntrances.Length - 1);
-            int entranceToPickIndex = 0;
+            //Debug.Log(pipeEntrances.Length);
 
+            //int entranceToPickIndex = 1;
+            int entranceToPickIndex = Random.Range(0, pipeEntrances.Length);
             GameObject entranceToPick = pipeEntrances[entranceToPickIndex].gameObject;
-
-            Debug.Log(entranceToPick);
-            Debug.Log(entranceToPick.GetComponent<SeamScript>());
-
             entranceToPick.GetComponent<SeamScript>().isExit = false;
 
-            //Vector3 newPipePosition = GetComponentInParent<Transform>().position;
-            Vector3 newPipePosition = transform.position - entranceToPick.transform.localPosition;
 
-            //Debug.Log(transform.position);
+            Quaternion rotationToMake = Quaternion.FromToRotation(entranceToPick.transform.forward, -transform.forward);
+
+            //Debug.Log(-transform.forward);
+            //Debug.Log(entranceToPick.gameObject);
+            //Debug.Log(rotationToMake.eulerAngles);
+
+            pipeToPick.transform.Rotate(rotationToMake.eulerAngles);
+
+            //float placementOffsetDistance = Vector3.Distance(entranceToPick.transform.localPosition, entranceToPick.GetComponentInParent<Transform>().position);
+            float placementOffsetDistance = entranceToPick.transform.localPosition.magnitude;
+
+            //Vector3 newPipePosition = transform.position - entranceToPick.transform.localPosition; // localposition wont be affected by object rotation
+            Vector3 newPipePosition = transform.position - transform.forward * placementOffsetDistance;
 
             pipeToPick.transform.position = newPipePosition;
 
-
-
-
-
-            //GameObject entranceToPick
-
             Debug.Log("Make pipe!");
+
+            Debug.Log("Update the OtherPipe reference");
 
         }
     }
