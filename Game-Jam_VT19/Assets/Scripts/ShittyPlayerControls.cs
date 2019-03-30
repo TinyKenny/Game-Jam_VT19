@@ -36,7 +36,7 @@ public class ShittyPlayerControls : MonoBehaviour
 
         transform.Rotate(new Vector3(rotateX, rotateY, rotateZ) * rotationSpeedMod * Time.deltaTime); // z = Input.GetAxisRaw("Horizontal")
 
-        Debug.Log(transform.forward);
+        //Debug.Log(transform.forward);
 
         transform.Translate(new Vector3(0.0f, 0.0f, 1.0f) * moveSpeedMod * Time.deltaTime);
     }

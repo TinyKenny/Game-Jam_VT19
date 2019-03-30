@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ShittyCameraScript : MonoBehaviour
 {
+    public float maxDistance = 20.0f;
     public GameObject player;
 
     // Start is called before the first frame update
@@ -15,7 +16,7 @@ public class ShittyCameraScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = player.transform.position - (player.transform.forward * 20.0f);
+        transform.position = player.transform.position - (player.transform.forward * maxDistance);
         //transform.LookAt(player.transform);
         transform.rotation = player.transform.rotation;
     }
