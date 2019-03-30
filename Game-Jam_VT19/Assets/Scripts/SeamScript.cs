@@ -15,10 +15,44 @@ public class SeamScript : MonoBehaviour
             //Debug.Break();
 
 
-            int pipeToPickIndex = Random.Range(0, GameController.GameControllerInstance.pipes.Length - 1);
+            GameObject[] pipes = GameController.GameControllerInstance.straightPipes; // change default?
+
+            do
+            {
+                int pipeTypeToPick = Random.Range(0, 7);
+                switch (pipeTypeToPick)
+                {
+                    case 0:
+                        pipes = GameController.GameControllerInstance.straightPipes;
+                        break;
+                    case 1:
+                        pipes = GameController.GameControllerInstance.cornerPipes;
+                        break;
+                    case 2:
+                        pipes = GameController.GameControllerInstance.caltropPipes;
+                        break;
+                    case 3:
+                        pipes = GameController.GameControllerInstance.crossingPipes;
+                        break;
+                    case 4:
+                        pipes = GameController.GameControllerInstance.tCrossingPipes;
+                        break;
+                    case 5:
+                        pipes = GameController.GameControllerInstance.doubleTCrossingPipes;
+                        break;
+                    case 6:
+                        pipes = GameController.GameControllerInstance.muhsroomPipes;
+                        break;
+                    default:
+                        Debug.Log(pipeTypeToPick);
+                        break;
+                }
+            } while (pipes.Length == 0);
+
+            int pipeToPickIndex = Random.Range(0, pipes.Length);
 
             //GameObject pipeToPick = GameController.GameControllerInstance.pipes[pipeToPickIndex];
-            GameObject pipeToPick = Instantiate(GameController.GameControllerInstance.pipes[pipeToPickIndex]);
+            GameObject pipeToPick = Instantiate(pipes[pipeToPickIndex]);
 
             SeamScript[] pipeEntrances = pipeToPick.GetComponentsInChildren<SeamScript>();
 
@@ -49,6 +83,8 @@ public class SeamScript : MonoBehaviour
             Debug.Log("Make pipe!");
 
             Debug.Log("Update the OtherPipe reference");
+
+
 
         }
     }

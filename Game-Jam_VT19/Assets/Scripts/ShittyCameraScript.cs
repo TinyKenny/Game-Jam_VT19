@@ -17,7 +17,6 @@ public class ShittyCameraScript : MonoBehaviour
     void Update()
     {
         transform.position = player.transform.position - (player.transform.forward * maxDistance);
-        //transform.LookAt(player.transform);
         transform.rotation = player.transform.rotation;
     }
 }
