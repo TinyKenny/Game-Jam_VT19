@@ -23,6 +23,8 @@ public class GameController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        score = PlayerPrefs.GetFloat("Score");
+        PlayerPrefs.SetFloat("Score", 0.0f);
         GameControllerInstance = this;
         scoreText.text = "Score: " + (int)score;
     }
@@ -40,7 +42,7 @@ public class GameController : MonoBehaviour
 
     public void GameOver()
     {
-
+        PlayerPrefs.SetFloat("Score", score);
 
         SceneManager.LoadScene(1);
 
