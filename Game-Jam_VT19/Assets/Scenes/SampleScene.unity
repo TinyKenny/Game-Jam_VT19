@@ -453,6 +453,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxDistance: 20
+  pipeLayer:
+    serializedVersion: 2
+    m_Bits: 0
   player: {fileID: 787357507}
 --- !u!114 &534669907
 MonoBehaviour:
@@ -998,6 +1001,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Constraints
       value: 126
+      objectReference: {fileID: 0}
+    - target: {fileID: 4594781207446668610, guid: 73f592db61b98b04983b9932186d19b6,
+        type: 3}
+      propertyPath: yawSpeed
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 4594781207446668610, guid: 73f592db61b98b04983b9932186d19b6,
+        type: 3}
+      propertyPath: rollSpeed
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 4594781207446668610, guid: 73f592db61b98b04983b9932186d19b6,
+        type: 3}
+      propertyPath: moveSpeedScaleRate
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4594781207446668610, guid: 73f592db61b98b04983b9932186d19b6,
+        type: 3}
+      propertyPath: baseMovementSpeed
+      value: 7.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4594781207446668610, guid: 73f592db61b98b04983b9932186d19b6,
+        type: 3}
+      propertyPath: rotationSpeedScaleRate
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4594781207446668610, guid: 73f592db61b98b04983b9932186d19b6,
+        type: 3}
+      propertyPath: pitchSpeed
+      value: 25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 73f592db61b98b04983b9932186d19b6, type: 3}
