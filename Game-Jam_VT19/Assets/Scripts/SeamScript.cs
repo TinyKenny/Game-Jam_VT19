@@ -16,14 +16,14 @@ public class SeamScript : MonoBehaviour
 
             do
             {
-                int pipeTypeToPick = Random.Range(0, 7);
+                int pipeTypeToPick = Random.Range(0, 6);
                 switch (pipeTypeToPick)
                 {
                     case 0:
                         pipes = GameController.GameControllerInstance.straightPipes;
                         break;
                     case 1:
-                        pipes = GameController.GameControllerInstance.cornerPipes;
+                        pipes = GameController.GameControllerInstance.muhsroomPipes;
                         break;
                     case 2:
                         pipes = GameController.GameControllerInstance.caltropPipes;
@@ -36,9 +36,6 @@ public class SeamScript : MonoBehaviour
                         break;
                     case 5:
                         pipes = GameController.GameControllerInstance.doubleTCrossingPipes;
-                        break;
-                    case 6:
-                        pipes = GameController.GameControllerInstance.muhsroomPipes;
                         break;
                     default:
                         Debug.Log(pipeTypeToPick);

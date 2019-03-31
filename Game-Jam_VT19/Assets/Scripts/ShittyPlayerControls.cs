@@ -53,4 +53,12 @@ public class ShittyPlayerControls : MonoBehaviour
 
         transform.Translate(new Vector3(0.0f, 0.0f, 1.0f) * baseMovementSpeed * (1.0f + moveSpeedMod) * Time.deltaTime);
     }
+
+    private void OnCollisionEnter(Collision other)
+    {
+        if (other.transform.CompareTag("Pipe"))
+        {
+
+        }
+    }
 }
