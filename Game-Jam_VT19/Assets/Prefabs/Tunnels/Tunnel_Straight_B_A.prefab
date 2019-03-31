@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1617066276465773585}
   - component: {fileID: 4703211717446464053}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bump_Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54,7 +54,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1984870985529362763}
   - component: {fileID: 5354641289020015997}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bump_Collider (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -98,7 +98,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2471714698085315637}
   - component: {fileID: 7452031381931906153}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bump_Collider (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -142,7 +142,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2032207342640891577}
   - component: {fileID: 3621797786138852994}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bump_Collider (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -186,7 +186,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6544410985926926568}
   - component: {fileID: 2489754335599391169}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bump_Collider (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -230,7 +230,7 @@ GameObject:
   m_Component:
   - component: {fileID: 817381787333202366}
   - component: {fileID: 400959670029792343}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bump_Collider (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -274,7 +274,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2831698160675946725}
   - component: {fileID: 2192740006100601322}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bump_Collider (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -317,9 +317,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2479650512689408326}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Tunnel_Straight_B_A
-  m_TagString: Untagged
+  m_TagString: Pipe
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -351,7 +351,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7465642842270286848}
   - component: {fileID: 3553270849747758766}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bump_Collider (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -396,6 +396,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Connection_Point_A
+      objectReference: {fileID: 0}
+    - target: {fileID: 7142151228335501406, guid: 00b33b1b03e2306489f4ac7596833303,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2754473246292062766, guid: 00b33b1b03e2306489f4ac7596833303,
         type: 3}
@@ -472,6 +477,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Straight_Colliders
       objectReference: {fileID: 0}
+    - target: {fileID: 2391461608644923042, guid: a5494288e5c1a3e41b1f58f4d2bb9ef3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 2082402778516056709, guid: a5494288e5c1a3e41b1f58f4d2bb9ef3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -527,6 +537,46 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6176349161639919256, guid: a5494288e5c1a3e41b1f58f4d2bb9ef3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1262606907136644073, guid: a5494288e5c1a3e41b1f58f4d2bb9ef3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7261856635067836044, guid: a5494288e5c1a3e41b1f58f4d2bb9ef3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6617815193565468418, guid: a5494288e5c1a3e41b1f58f4d2bb9ef3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 5327763658811768629, guid: a5494288e5c1a3e41b1f58f4d2bb9ef3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1729738704100069040, guid: a5494288e5c1a3e41b1f58f4d2bb9ef3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 753890111391118372, guid: a5494288e5c1a3e41b1f58f4d2bb9ef3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7733470972403715382, guid: a5494288e5c1a3e41b1f58f4d2bb9ef3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a5494288e5c1a3e41b1f58f4d2bb9ef3, type: 3}
 --- !u!1001 &4701289923847097216
@@ -539,6 +589,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: a5979efed156fbc4eb0bae729172324e, type: 3}
       propertyPath: m_Name
       value: Tunnel_Straight_B
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: a5979efed156fbc4eb0bae729172324e, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a5979efed156fbc4eb0bae729172324e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -603,6 +657,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Connection_Point_B
+      objectReference: {fileID: 0}
+    - target: {fileID: 7142151228335501406, guid: 00b33b1b03e2306489f4ac7596833303,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2754473246292062766, guid: 00b33b1b03e2306489f4ac7596833303,
         type: 3}
