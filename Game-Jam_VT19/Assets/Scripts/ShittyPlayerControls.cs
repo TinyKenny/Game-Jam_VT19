@@ -58,7 +58,8 @@ public class ShittyPlayerControls : MonoBehaviour
     {
         if (other.transform.CompareTag("Pipe"))
         {
-
+            Debug.Log("Game over!");
+            GameController.GameControllerInstance.GameOver();
         }
     }
 }

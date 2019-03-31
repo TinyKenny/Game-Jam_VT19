@@ -77,7 +77,7 @@ public class SeamScript : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player") && !isExit)
         {
-            Debug.Log("Delete previous");
+            //Debug.Log("Delete previous");
             otherPipe.CleanUpPipes(this);
         }
     }
@@ -86,11 +86,11 @@ public class SeamScript : MonoBehaviour
     {
         GameObject parentObject = transform.parent.gameObject;
 
-        Debug.Log(parentObject);
+        //Debug.Log(parentObject);
 
         SeamScript[] points = parentObject.GetComponentsInChildren<SeamScript>();
 
-        Debug.Log(points);
+        //Debug.Log(points);
 
         foreach(SeamScript point in points)
         {

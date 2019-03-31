@@ -24,11 +24,13 @@ public class GameController : MonoBehaviour
     void Start()
     {
         GameControllerInstance = this;
+        scoreText.text = "Score: " + (int)score;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (SceneManager.GetActiveScene().name.Equals("SampleScene"))
 
         score += Time.deltaTime;
 
