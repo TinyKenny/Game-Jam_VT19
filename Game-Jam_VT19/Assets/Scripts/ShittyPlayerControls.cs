@@ -12,8 +12,11 @@ public class ShittyPlayerControls : MonoBehaviour
     public float rollSpeed = 20.0f;
 
     [Header("Speed Scaling (Should be left at zero!)")]
+    public float moveSpeedScaleRate = 1.0f;
     public float moveSpeedMod = 0.0f;
+    public float rotationSpeedScaleRate = 1.0f;
     public float rotationSpeedMod = 0.0f;
+    
 
     /* 
      * movement speed up
@@ -37,6 +40,8 @@ public class ShittyPlayerControls : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        moveSpeedMod += moveSpeedScaleRate * Time.deltaTime;
+        rotationSpeedMod += rotationSpeedScaleRate * Time.deltaTime;
 
         float rotateX = Input.GetAxisRaw("Pitch") * pitchSpeed;
         float rotateY = Input.GetAxisRaw("Yaw") * yawSpeed;
