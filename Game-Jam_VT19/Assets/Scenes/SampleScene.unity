@@ -1249,7 +1249,7 @@ PrefabInstance:
     - target: {fileID: 4594781207446668610, guid: 73f592db61b98b04983b9932186d19b6,
         type: 3}
       propertyPath: yawSpeed
-      value: 30
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 4594781207446668610, guid: 73f592db61b98b04983b9932186d19b6,
         type: 3}
@@ -1274,7 +1274,7 @@ PrefabInstance:
     - target: {fileID: 4594781207446668610, guid: 73f592db61b98b04983b9932186d19b6,
         type: 3}
       propertyPath: pitchSpeed
-      value: 25
+      value: 30
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 73f592db61b98b04983b9932186d19b6, type: 3}
