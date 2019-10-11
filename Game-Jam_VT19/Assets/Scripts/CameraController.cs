@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShittyCameraScript : MonoBehaviour
+public class CameraController : MonoBehaviour
 { 
     public float maxDistance = 20.0f;
     public LayerMask pipeLayer;

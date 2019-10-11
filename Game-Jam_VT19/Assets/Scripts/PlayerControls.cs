@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShittyPlayerControls : MonoBehaviour
+public class PlayerControls : MonoBehaviour
 {
     public float baseMovementSpeed = 5.0f;
 
